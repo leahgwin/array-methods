@@ -6,20 +6,20 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
     Use string templates to construct the DOM elements.
 */
 
-// let allPlanets = "";
+/*let allPlanets = "";
 
-// planets.forEach(function (singleItem) {
-//     allPlanets = `${allPlanets} ${singleItem} `
-// })
+planets.forEach(function (singleItem) {
+    allPlanets = `${allPlanets} ${singleItem} `
+})
 
-// document.getElementById("planets").innerHTML = allPlanets;
+document.getElementById("planets").innerHTML = allPlanets;*/
 
-
+//this one was to practice taking javascript and formatting it
 let allPlanets = "<ul>";
 
 planets.forEach(function (singleItem) {
     allPlanets += `<li>${singleItem}</li>`
-})
+});
 allPlanets += `</ul>`
 document.getElementById("planets").innerHTML = allPlanets;
 
@@ -33,6 +33,17 @@ const planetEl = document.getElementById("planets")
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
+
+
+const capitalPlanet = planets.map(function (capitalized) {
+    let newArray = []
+
+    return capitalized.charAt(0).toUpperCase()+capitalized.slice(1);
+    
+    console.log(newArray.join(' '));
+});
+console.log(capitalPlanet);
+
 
 
 /*
