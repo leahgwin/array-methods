@@ -17,13 +17,12 @@ document.getElementById("planets").innerHTML = allPlanets;*/
 //this one was to practice taking javascript and formatting it
 let allPlanets = "<ul>";
 
-planets.forEach(function (singleItem) {
+const planetList = function (singleItem) {
     allPlanets += `<li>${singleItem}</li>`
-});
+}
+
+planets.forEach(planetList);
 allPlanets += `</ul>`
-const planetEl = document.getElementById("planets").innerHTML = allPlanets;
-
-
 
 
 /*
@@ -39,8 +38,10 @@ const capitalPlanet = planets.map(function (capitalized) {
  return capitalized.charAt(0).toUpperCase()+capitalized.slice(1);    
 });
 console.log(capitalPlanet);
+console.log(planetList);
+capitalPlanet.forEach(planetList);
+const planetEl = document.getElementById("planets").innerHTML = allPlanets;
 
-planets.forEach(capitalized);
 
 /*
     Use the filter method to create a new array that
