@@ -38,7 +38,6 @@ const capitalPlanet = planets.map(function (capitalized) {
  return capitalized.charAt(0).toUpperCase()+capitalized.slice(1);    
 });
 console.log(capitalPlanet);
-console.log(planetList);
 capitalPlanet.forEach(planetList);
 const planetEl = document.getElementById("planets").innerHTML = allPlanets;
 
@@ -50,6 +49,16 @@ const planetEl = document.getElementById("planets").innerHTML = allPlanets;
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
+
+
+const checkE = function (planetItem) {
+    let hasE = planets.includes("e");
+    return hasE;
+}    
+
+
+console.log(planets.filter(checkE));
+
 
 
 // Use the reduce method to create a sentence from the words in the following array
