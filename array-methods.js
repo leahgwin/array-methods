@@ -21,10 +21,10 @@ planets.forEach(function (singleItem) {
     allPlanets += `<li>${singleItem}</li>`
 });
 allPlanets += `</ul>`
-document.getElementById("planets").innerHTML = allPlanets;
+const planetEl = document.getElementById("planets").innerHTML = allPlanets;
 
 
-const planetEl = document.getElementById("planets")
+
 
 /*
     Use the map method to create a new array where the
@@ -36,15 +36,11 @@ const planetEl = document.getElementById("planets")
 
 
 const capitalPlanet = planets.map(function (capitalized) {
-    let newArray = []
-
-    return capitalized.charAt(0).toUpperCase()+capitalized.slice(1);
-    
-    console.log(newArray.join(' '));
+ return capitalized.charAt(0).toUpperCase()+capitalized.slice(1);    
 });
 console.log(capitalPlanet);
 
-
+planets.forEach(capitalized);
 
 /*
     Use the filter method to create a new array that
