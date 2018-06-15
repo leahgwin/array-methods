@@ -50,16 +50,18 @@ const planetEl = document.getElementById("planets").innerHTML = allPlanets;
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
 
-
-const checkE = function (planetItem) {
-    let hasE = planets.includes("e");
+const checkE = planets.filter(planet => {
+    const hasE = planet.includes("e");
     return hasE;
-}    
+})
 
-
-console.log(planets.filter(checkE));
-
-
+console.log(checkE);
 
 // Use the reduce method to create a sentence from the words in the following array
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+
+const sentence = words.reduce(
+    (currentWord, nextWord) => currentWord + " " + nextWord
+)
+
+console.log(sentence);
